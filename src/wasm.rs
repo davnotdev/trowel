@@ -155,8 +155,11 @@ where
                 .style()
                 .set_property("image-rendering", "crisp-edges")
                 .ok()?;
-            canvas.style().set_property("width", "100%").ok()?;
-            canvas.style().set_property("height", "100%").ok()?;
+            canvas.style().set_property("width", "640px").ok()?;
+            canvas.style().set_property("height", "512px").ok()?;
+            canvas.style().set_property("display", "block").ok()?;
+            canvas.style().set_property("margin", "auto").ok()?;
+
             body.append_child(&canvas).ok()?;
             Some(canvas)
         })
